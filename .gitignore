@@ -1,1 +1,52 @@
-node_modules
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+functions/lib/
+web/.next/
+web/out/
+web/dist/
+web/build/
+mobile/dist/
+mobile/build/
+
+# Environment files (never commit secrets)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Firebase
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+firestore-debug.log
+ui-debug.log
+
+# Expo / React Native
+mobile/.expo/
+mobile/web-build/
+mobile/android/
+mobile/ios/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript
+*.tsbuildinfo

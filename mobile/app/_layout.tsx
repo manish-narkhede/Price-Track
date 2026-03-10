@@ -1,7 +1,23 @@
 import {Tabs} from "expo-router";
+import React, {useEffect, useState} from "react";
 import {AuthProvider} from "../src/context/AuthContext";
+import AppSplashScreen from "../src/components/AppSplashScreen";
 
 export default function RootLayout() {
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSplash(false);
+    }, 2200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (showSplash) {
+    return <AppSplashScreen />;
+  }
+
   return (
     <AuthProvider>
       <Tabs
